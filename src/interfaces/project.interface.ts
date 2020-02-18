@@ -1,5 +1,7 @@
 export default interface Project {
     
+    getRepositoryLink(): string
+    hasRepository(): boolean
     getLinkName(): string
     getTechnologies(): string[]
     getCardIcon(): string

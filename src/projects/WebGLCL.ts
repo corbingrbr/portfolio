@@ -2,8 +2,10 @@ import Project from '../interfaces/project.interface';
 
 export const WebGLCL: Project = {
 
+    getRepositoryLink(): string { return "https://github.com/corbingrbr/web-gl-cl" },
+    hasRepository(): boolean { return true },
     getLinkName(): string { return "webglcl" },
-    getTechnologies(): string[] { return ["js", "webgl"] },
+    getTechnologies(): string[] { return ["js", "webgl", "git"] },
     getCardIcon(): string { return "fas fa-gem" },
     getCardImg(): string { return "" },
     getTitle(): string { return "WebGLCL" },

@@ -22,7 +22,7 @@ const ProjectPortfolio = ({ projects }) => {
             </div>
 
             <div className="row justify-content-center mt-2">
-                <div className="col-md-4 shadow-sm pr-4 pl-4 pt-2 pb-2 bg-light rounded">
+                <div className="col-lg-4 col-md-8 col-sm-12 shadow-sm pr-4 pl-4 pt-2 pb-2 bg-light rounded">
                     <SelectableTechnologies technologies={uniqueTechnologies} onSelect={(ndx) => setChips(chips.concat([uniqueTechnologies[ndx]]))} />
                 </div>
             </div>

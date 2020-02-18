@@ -2,6 +2,8 @@ import Project from '../interfaces/project.interface';
 
 export const AmazonFishing: Project = {
 
+    getRepositoryLink(): string { return "" },
+    hasRepository(): boolean { return false },
     getLinkName(): string { return "amazon-fishing" },
     getTechnologies(): string[] { return ["html", "css", "react", "js", "nodejs", "mailchimp", "bootstrap"] },
     getCardIcon(): string { return "fas fa-fish" },
@@ -13,5 +15,4 @@ export const AmazonFishing: Project = {
     getYear(): number { return 2020 },
     hasView(): boolean { return true },
     hasDemo(): boolean { return true },
-
 }

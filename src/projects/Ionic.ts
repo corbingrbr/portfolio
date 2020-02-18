@@ -2,8 +2,10 @@ import Project from '../interfaces/project.interface';
 
 export const Ionic : Project = {
 
+    getRepositoryLink(): string { return "https://github.com/corbingrbr/ionic" },
+    hasRepository(): boolean { return true },
     getLinkName(): string { return "ionic" },
-    getTechnologies(): string[] { return ["processing", "java"]},
+    getTechnologies(): string[] { return ["processing", "java", "git"]},
     getCardIcon(): string { return "fas fa-atom"},
     getCardImg(): string { return "/assets/ionic/ionic.png" },
     getTitle(): string { return "Ionic" },

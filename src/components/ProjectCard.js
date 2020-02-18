@@ -47,7 +47,7 @@ const ProjectCard = ({ project, handleViewRequest, handleDemoRequest }) => {
                         {
                             project.hasView() ?
                                 <Link to={`/projects/${project.getLinkName()}/view`}>
-                                    <button type="button" className="btn btn-sm btn-outline-secondary" onClick={handleViewRequest}>View</button>
+                                    <button type="button" className="btn btn-sm btn-outline-primary" onClick={handleViewRequest}>View</button>
                                 </Link>
                                 :
                                 null
@@ -57,6 +57,14 @@ const ProjectCard = ({ project, handleViewRequest, handleDemoRequest }) => {
                                 <Link to={`/projects/${project.getLinkName()}/demo`}>
                                     <button type="button" className="btn btn-sm btn-outline-success" onClick={handleDemoRequest}>Demo</button>
                                 </Link>
+                                :
+                                null
+                        }
+                        {
+                            project.hasRepository() ?
+                                <button type="button" className="btn btn-sm btn-outline-secondary repository-btn" onClick={() => window.open(project.getRepositoryLink())}>
+                                    <img src={`/assets/icons/git.svg`} alt={`git.svg`} height={18} width={18} />
+                                </button>
                                 :
                                 null
                         }

@@ -44,3 +44,7 @@
 .technology-select:hover {
   background-color: #DDD;
 }
+
+.repository-btn:hover {
+  fill: white;
+}

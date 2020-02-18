@@ -2,6 +2,8 @@ import Project from '../interfaces/project.interface';
 
 export const VoxelHack : Project = {
 
+    getRepositoryLink(): string { return "" },
+    hasRepository(): boolean { return false },
     getLinkName(): string { return "voxel-hack" },
     getTechnologies(): string[] { return ["unity", "csharp"]},
     getCardIcon(): string { return "fas fa-terminal"},

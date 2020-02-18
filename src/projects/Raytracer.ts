@@ -2,8 +2,10 @@ import Project from '../interfaces/project.interface';
 
 export const Raytracer: Project = {
 
+    getRepositoryLink(): string { return "https://github.com/corbingrbr/RayTrace" },
+    hasRepository(): boolean { return true },
     getLinkName(): string { return "raytracer" },
-    getTechnologies(): string[] { return ["cpp"] },
+    getTechnologies(): string[] { return ["cpp", "git"] },
     getCardIcon(): string { return "fas fa-crosshairs" },
     getCardImg(): string { return "" },
     getTitle(): string { return "Raytracer" },

@@ -2,6 +2,8 @@ import Project from '../interfaces/project.interface';
 
 export const FloodFill: Project = {
 
+    getRepositoryLink(): string { return "https://github.com/MatheusFaria/flood-fill" },
+    hasRepository(): boolean { return true },
     getLinkName(): string { return "flood-fill" },
     getTechnologies(): string[] { return ["cpp", "git", "opengl"] },
     getCardIcon(): string { return "fas fa-cubes" },

@@ -2,6 +2,8 @@ import Project from '../interfaces/project.interface';
 
 export const Arrakis: Project = {
 
+    getRepositoryLink(): string { return "" },
+    hasRepository(): boolean { return false },
     getLinkName(): string { return "arrakis" },
     getTechnologies(): string[] { return ["cpp", "opengl"] },
     getCardIcon(): string { return "fas fa-globe-europe" },

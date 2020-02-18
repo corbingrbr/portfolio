@@ -2,6 +2,8 @@ import Project from '../interfaces/project.interface';
 
 export const DataCenterStateMachine: Project = {
 
+    getRepositoryLink(): string { return "" },
+    hasRepository(): boolean { return false },
     getLinkName(): string { return "data-center-state-machine" },
     getTechnologies(): string[] { return ["react", "js", "typeScript", "sql", "mongodb", "git", "html", "css", "bootstrap"] },
     getCardIcon(): string { return "fas fa-server" },

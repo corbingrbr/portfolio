@@ -19,8 +19,6 @@ const ProjectView = ({ project }) => {
                 </div>*/}
 
                 <div className="card-body" /*style={{ minHeight: 250 }}*/>
-                    <img src={project.getCardImg()} style={{maxHeight: 350}} className="mb-3"/>
-
                     <h3 className="card-title mb-1">{project.getTitle()}
                         {/*<span className="float-right">
 
@@ -38,6 +36,13 @@ const ProjectView = ({ project }) => {
                     <span className="align-bottom">
                         <TechnologyIcons technologies={project.getTechnologies().sort()} justifyCenter={true} />
                     </span>
+
+                    <hr />
+
+                    <img src={project.getCardImg()} style={{ maxHeight: 350 }} className="mb-3" />
+
+                    <hr />
+
                 </div>
 
                 <div className="card-footer">
