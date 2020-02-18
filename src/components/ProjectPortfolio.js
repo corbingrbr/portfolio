@@ -55,18 +55,4 @@ const SelectableTechnology = ({ technology, onSelect, id }) => (
     </div>
 )
 
-/*const CustomChip = (value) => {
-
-    console.log(value)
-
-    let technology = value.technology;
-
-    return (
-        <div>
-            <img src={`/assets/icons/${technology}.svg`} alt={`${technology}.svg`} height={16} width={16} />
-        </div>
-    )
-}*/
-
-
 export default ProjectPortfolio

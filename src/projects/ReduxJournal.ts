@@ -2,6 +2,7 @@ import Project from '../interfaces/project.interface';
 
 export const ReduxJournal : Project = {
 
+    getLinkName(): string { return "redux-journal" },
     getTechnologies(): string[] { return ["html", "css", "react", "js", "material-ui"]},
     getCardIcon(): string { return "fas fa-book"},
     getCardImg(): string { return "" },

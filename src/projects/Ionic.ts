@@ -2,6 +2,7 @@ import Project from '../interfaces/project.interface';
 
 export const Ionic : Project = {
 
+    getLinkName(): string { return "ionic" },
     getTechnologies(): string[] { return ["processing", "java"]},
     getCardIcon(): string { return "fas fa-atom"},
     getCardImg(): string { return "/assets/ionic/ionic.png" },

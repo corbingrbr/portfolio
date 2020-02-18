@@ -1,5 +1,6 @@
 export default interface Project {
     
+    getLinkName(): string
     getTechnologies(): string[]
     getCardIcon(): string
     getCardImg(): string

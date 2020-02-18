@@ -2,11 +2,13 @@ import React from 'react';
 
 /*import Project from '../interfaces/project.interface'*/
 
+import { Link } from 'react-router-dom';
+import TechnologyIcons from './TechnologyIcons';
+
+
 const ProjectCard = ({ project, handleViewRequest, handleDemoRequest }) => {
 
-    let imgStyle = {
-        backgroundColor: "#CCC",
-    }
+    let imgStyle = { backgroundColor: "#CCC" }
 
     return (
         <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
@@ -42,8 +44,22 @@ const ProjectCard = ({ project, handleViewRequest, handleDemoRequest }) => {
 
                 <div className="card-footer">
                     <div className="btn-group">
-                        {project.hasView() ? <button type="button" className="btn btn-sm btn-outline-secondary" onClick={handleViewRequest}>View</button> : null}
-                        {project.hasDemo() ? <button type="button" className="btn btn-sm btn-outline-success" onClick={handleDemoRequest}>Demo</button> : null}
+                        {
+                            project.hasView() ?
+                                <Link to={`/projects/${project.getLinkName()}/view`}>
+                                    <button type="button" className="btn btn-sm btn-outline-secondary" onClick={handleViewRequest}>View</button>
+                                </Link>
+                                :
+                                null
+                        }
+                        {
+                            project.hasDemo() ?
+                                <Link to={`/projects/${project.getLinkName()}/demo`}>
+                                    <button type="button" className="btn btn-sm btn-outline-success" onClick={handleDemoRequest}>Demo</button>
+                                </Link>
+                                :
+                                null
+                        }
                     </div>
                 </div>
             </div>
@@ -53,8 +69,4 @@ const ProjectCard = ({ project, handleViewRequest, handleDemoRequest }) => {
 
 export default ProjectCard
 
-const TechnologyIcons = ({ technologies }) => (
-    <div className="row mb-0">
-        {technologies.map((technology, ndx) => <span key={ndx} className="col-sm-1 pr-4"><img src={`/assets/icons/${technology}.svg`} alt={`${technology}.svg`} height={24} width={24} /></span>)}
-    </div>
-)
+

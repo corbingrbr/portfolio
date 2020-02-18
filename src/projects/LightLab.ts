@@ -1,9 +1,10 @@
 import Project from '../interfaces/project.interface';
 
-export const LightLab : Project = {
+export const LightLab: Project = {
 
-    getTechnologies(): string[] { return ["html", "css", "jquery", "js", "c", "cpp", "adafruit"]},
-    getCardIcon(): string { return "fas fa-microchip"},
+    getLinkName(): string { return "light-lab" },
+    getTechnologies(): string[] { return ["html", "css", "jquery", "js", "c", "cpp", "adafruit"] },
+    getCardIcon(): string { return "fas fa-microchip" },
     getCardImg(): string { return "" },
     getTitle(): string { return "LightLab" },
     getCardDescription(): string { return "A breadboard prototype to control an Adafruit Neopixel paired with a web interface for lighting sequence management." },

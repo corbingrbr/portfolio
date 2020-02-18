@@ -1,10 +1,11 @@
 import Project from '../interfaces/project.interface';
 
-export const FloodFill : Project = {
+export const FloodFill: Project = {
 
-    getTechnologies(): string[] { return ["cpp", "git", "opengl"]},
-    getCardIcon(): string { return "fas fa-cubes"},
-    getCardImg(): string { return "assets/flood/flood.png" },
+    getLinkName(): string { return "flood-fill" },
+    getTechnologies(): string[] { return ["cpp", "git", "opengl"] },
+    getCardIcon(): string { return "fas fa-cubes" },
+    getCardImg(): string { return "/assets/flood/flood.png" },
     getTitle(): string { return "FloodFill" },
     getCardDescription(): string { return "A voxel puzzle game involving color and physics." },
     hasDescription(): boolean { return true },
