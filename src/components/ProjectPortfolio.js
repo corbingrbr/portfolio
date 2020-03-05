@@ -6,13 +6,13 @@ const ProjectPortfolio = ({ projects }) => {
 
     const [chips, setChips] = useState([]);
 
-    let uniqueTechnologies = [... new Set(projects.reduce((technologies, project) => technologies.concat(project.getTechnologies()), []))].sort()
+    let uniqueTechnologies = [...new Set(projects.reduce((technologies, project) => technologies.concat(project.getTechnologies()), []))].sort()
     let filteredProjects = filterProjectsByChips(projects, chips);
 
     return (
         <div className="pt-5">
             <div className="row justify-content-center">
-                <div className="col-md-4">
+                <div className="col-md-4 p-0">
                     <Chips
                         value={chips}
                         onChange={setChips}

@@ -1,17 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  /*Link*/
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
-/*import Project from './interfaces/project.interface';*/
-//import ProjectAlbum from './components/ProjectAlbum';
 import ProjectPortfolio from './components/ProjectPortfolio';
-import ProjectsView from './components/ProjectsView';
+import ProjectView from './components/ProjectView';
+import ProjectDemo from './components/ProjectDemo';
+import Header from './components/Header'
 
 import { AmazonFishing, Arrakis, CrystalLattice, DataCenterStateMachine, FloodFill, Ionic, Obj2Spring, Raytracer, VoxelHack, WebGLCL, ReduxJournal, LightLab } from './projects'
 
@@ -31,23 +26,30 @@ const projects = [
 ];
 
 const App = () => (
-  <div className="App">
-    <div className="app-background">
-      <Router>
-        <Switch>
-          <Route exact path="/projects/:project/view" render={(props) => <ProjectsView projects={projects} {...props} />} />
-          <Route exact path="/projects/:project/demo">
-            <h2>This project does not have demo.</h2>
-          </Route>
-          <Route path="/projects">
-            <ProjectPortfolio projects={projects} />
-          </Route>
 
-        </Switch>
-      </Router>
 
-    </div>
-  </div>
+
+  <div className="App" style={{ height: "100%" }}>
+
+    <Router>
+      <Switch>
+
+        <Route path="/profile"><Header activeLink="profile" /><h1 className="text-white">PROFILE</h1></Route>
+
+        <Route exact path="/portfolio/:project/view" render={props => <div className="w-100"><Header activeLink="portfolio" /><ProjectView projects={projects} {...props} /></div>} />
+
+        <Route exact path="/portfolio/:project/demo" render={props => <div className="w-100"><Header activeLink="portolio" /><ProjectDemo projects={projects} {...props} /></div>} />
+
+        <Route path="/portfolio"><Header activeLink="portfolio" /><ProjectPortfolio projects={projects} /></Route>
+
+        <Route path="/contact"><Header activeLink="contact" /><h1 className="text-white">CONTACT</h1></Route>
+
+        <Redirect exact from="/" to="portfolio" />
+
+      </Switch>
+    </Router>
+
+  </div >
 );
 
 export default App;

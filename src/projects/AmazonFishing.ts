@@ -14,5 +14,5 @@ export const AmazonFishing: Project = {
     getDescription(): string { return "Missing Project Description" },
     getYear(): number { return 2020 },
     hasView(): boolean { return true },
-    hasDemo(): boolean { return true },
+    hasDemo(): boolean { return false },
 }

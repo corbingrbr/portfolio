@@ -46,7 +46,7 @@ const ProjectCard = ({ project, handleViewRequest, handleDemoRequest }) => {
                     <div className="btn-group">
                         {
                             project.hasView() ?
-                                <Link to={`/projects/${project.getLinkName()}/view`}>
+                                <Link to={`/portfolio/${project.getLinkName()}/view`}>
                                     <button type="button" className="btn btn-sm btn-outline-primary" onClick={handleViewRequest}>View</button>
                                 </Link>
                                 :
@@ -54,7 +54,7 @@ const ProjectCard = ({ project, handleViewRequest, handleDemoRequest }) => {
                         }
                         {
                             project.hasDemo() ?
-                                <Link to={`/projects/${project.getLinkName()}/demo`}>
+                                <Link to={`/portfolio/${project.getLinkName()}/demo`}>
                                     <button type="button" className="btn btn-sm btn-outline-success" onClick={handleDemoRequest}>Demo</button>
                                 </Link>
                                 :
